@@ -1,22 +1,29 @@
 import './App.css';
+import { Link } from "react-router-dom"
 
 function App() {
   return (
     <div className="App">
       <h1 className='homeImage'>Fake img</h1>
-      <form className='loginForm'>
-        <label for="fname">Usuário:</label>
-        <input type="text" id="fname" name="fname"></input>
-        <label for="lname">Senha:</label>
-        <input type="text" id="lname" name="lname"></input>
-      </form>
-      <button className='button'>
-        Logar
-      </button>
-      <h3>Não tem uma conta?</h3>
-      <button className='button'>
-        Cadastrar
-      </button>
+      <div className='loginDiv'>
+        <form className='loginForm'>
+          <label>Usuário:</label>
+          <input type="text"></input>
+          <label>Senha:</label>
+          <input type="text"></input>
+        </form>
+        <Link to='/home'>
+          <button className='button'>
+            Logar
+          </button>
+        </Link>
+        <h3>Não tem uma conta?</h3>
+        <Link to='/register'>
+          <button className='button'>
+            Cadastrar
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }
