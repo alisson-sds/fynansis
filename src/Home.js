@@ -3,25 +3,32 @@ import { Link } from "react-router-dom"
 
 const Home = () => {
     return (
-        <div>
+        <>
             <input type="checkbox" id="check"></input>
-
+            <label htmlFor="check">
+                <i id="btn">+</i>
+                <i id="cancel">X</i>
+            </label>
             <div className="sidebar">
                 <header>Menu</header>
-                <a href='#'>
+                <a href='#' className="active">
+                    <i>-</i>
                     <span>Home</span>
                 </a>
-                <a href='#' class='active'>
+                <a href='#'>
+                    <i>-</i>
                     <span>Nova Transação</span>
                 </a>
-                <a href='#' class='active'>
+                <a href='#'>
+                    <i>-</i>
                     <span>Histórico</span>
                 </a>
-                <a href='#' class='active'>
+                <a href='#'>
+                    <i>-</i>
                     <span>Dados</span>
                 </a>
             </div>
-        </div>
+        </>
     )
 }
 
