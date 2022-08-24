@@ -20,20 +20,20 @@ const Home = () => {
       {isOpened && (
         <div className='sidebar'>
           <a href='#'>
-            <i>-</i>
-            <span>Home</span>
+            <i className='material-icons'>favorite</i>
+            <span>home</span>
           </a>
           <a href='#'>
-            <i>-</i>
+            <i className='material-icons'>paid</i>
             <span>Nova Transação</span>
           </a>
           <a href='#'>
-            <i>-</i>
+            <i className='material-icons'>manage_search</i>
             <span>Histórico</span>
           </a>
           <a href='#'>
-            <i>-</i>
-            <span>Dados</span>
+            <i className='material-icons'>query_stats</i>
+            <span>Avançado</span>
           </a>
         </div>
       )}
