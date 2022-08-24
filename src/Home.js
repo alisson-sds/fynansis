@@ -1,35 +1,44 @@
-import './Home.css';
-import { Link } from "react-router-dom"
+import './Home.css'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 const Home = () => {
-    return (
-        <>
-            <input type="checkbox" id="check"></input>
-            <label htmlFor="check">
-                <i id="btn">+</i>
-                <i id="cancel">X</i>
-            </label>
-            <div className="sidebar">
-                <header>Menu</header>
-                <a href='#' className="active">
-                    <i>-</i>
-                    <span>Home</span>
-                </a>
-                <a href='#'>
-                    <i>-</i>
-                    <span>Nova Transação</span>
-                </a>
-                <a href='#'>
-                    <i>-</i>
-                    <span>Histórico</span>
-                </a>
-                <a href='#'>
-                    <i>-</i>
-                    <span>Dados</span>
-                </a>
-            </div>
-        </>
-    )
+  const [isOpened, setIsOpened] = useState(false)
+  const toggleMenu = () => {
+    setIsOpened(!isOpened)
+  }
+  return (
+    <>
+      <header>
+        <button onClick={toggleMenu} className='btn material-icons'>
+          menu
+        </button>
+        <button onClick={toggleMenu} className='btn material-icons'>
+          account_circle
+        </button>
+      </header>
+      {isOpened && (
+        <div className='sidebar'>
+          <a href='#'>
+            <i>-</i>
+            <span>Home</span>
+          </a>
+          <a href='#'>
+            <i>-</i>
+            <span>Nova Transação</span>
+          </a>
+          <a href='#'>
+            <i>-</i>
+            <span>Histórico</span>
+          </a>
+          <a href='#'>
+            <i>-</i>
+            <span>Dados</span>
+          </a>
+        </div>
+      )}
+    </>
+  )
 }
 
 export default Home
