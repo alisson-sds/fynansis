@@ -34,7 +34,7 @@ header {
   display: block;
   height: 65px;
   width: 100%;
-  color: #ffffff;
+  color: #dedede;
   line-height: 65px;
   padding-left: 30px;
   box-sizing: border-box;
@@ -45,8 +45,8 @@ header {
 }
 
 a:hover {
-  border-left: 5px solid #18315b;
-  color: #18315b;
+  border-left: 5px solid #244887;
+  color: #244887;
 }
 
 .sidebar a i {
