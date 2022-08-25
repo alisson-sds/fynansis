@@ -7,36 +7,60 @@ const Home = () => {
   const toggleMenu = () => {
     setIsOpened(!isOpened)
   }
+  const mudaFunc = (valor) => {
+    if (valor) {
+    } else {
+    }
+  }
   return (
     <>
       <header>
-        <button onClick={toggleMenu} className='btn material-icons'>
+        <button onClick={toggleMenu} className='btn material-icons' style={{ color: isOpened ? '#244887' : '#cfd3d6' }}>
           menu
         </button>
         <button onClick={toggleMenu} className='btn material-icons'>
           account_circle
         </button>
       </header>
-      {isOpened && (
-        <div className='sidebar'>
-          <a href='#'>
-            <i className='material-icons'>favorite</i>
-            <span>home</span>
-          </a>
-          <a href='#'>
-            <i className='material-icons'>paid</i>
-            <span>Nova Transação</span>
-          </a>
-          <a href='#'>
-            <i className='material-icons'>manage_search</i>
-            <span>Histórico</span>
-          </a>
-          <a href='#'>
-            <i className='material-icons'>query_stats</i>
-            <span>Avançado</span>
-          </a>
+      <div className='content'>
+        {isOpened && (
+          <div className='sidebar'>
+            <a href='#'>
+              <i className='material-icons'>favorite</i>
+              <span>home</span>
+            </a>
+            <a href='#'>
+              <i className='material-icons'>paid</i>
+              <span>Transação</span>
+            </a>
+            <a href='#'>
+              <i className='material-icons'>manage_search</i>
+              <span>Histórico</span>
+            </a>
+            <a href='#'>
+              <i className='material-icons'>query_stats</i>
+              <span>Avançado</span>
+            </a>
+          </div>
+        )}
+        <div className='mainData'>
+          <div className='block'>
+            <i className='material-icons'>percent</i>
+            <span>18,95</span>
+            <hr /> Rendimento
+          </div>
+          <div className='block'>
+            <i className='material-icons'>payments</i>
+            <span>R$17.000</span>
+            <hr /> Investido
+          </div>
+          <div className='block'>
+            <i className='material-icons'>wallet</i>
+            <span>R$4.000</span>
+            <hr /> Carteira
+          </div>
         </div>
-      )}
+      </div>
     </>
   )
 }
