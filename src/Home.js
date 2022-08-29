@@ -92,18 +92,20 @@ const Home = () => {
                   <i className='material-icons'>price_change</i>
                   <span>Cotação</span>
                   <tr>
-                    <td>Cod moeda|</td>
-                    <td>BRL|</td>
-                    <td>Alta|</td>
-                    <td>Baixa|</td>
-                    <td>Últ. Atualização|</td>
+                    <td>Cod moeda</td>
+                    <td>Bid</td>
+                    <td>ask</td>
+                    <td>Alta</td>
+                    <td>Baixa</td>
+                    <td>Últ. Atualização</td>
                   </tr>
                   {Object.values(coins).map((moedas) => {
                     return (
                       //key é importante em um loop, mas a explicação fica pra próx
                       <tr key={moedas.code}>
                         <td>{moedas.code}</td>
-                        <td>{moedas.codein}</td>
+                        <td>{moedas.bid}</td>
+                        <td>{moedas.ask}</td>
                         <td>{moedas.high}</td>
                         <td>{moedas.low}</td>
                         <td>{moedas.create_date}</td>
@@ -111,10 +113,10 @@ const Home = () => {
                     )
                   })}
                 </div>
-                <div className='detailBlock'>
+                {/* <div className='detailBlock'>
                   <i className='material-icons'>monetization_ona</i>
                   <span>Aplicações</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
