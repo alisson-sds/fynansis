@@ -145,9 +145,14 @@ a:hover {
   font-family: 'Montserrat', sans-serif;
 }
 
-.detailBlock i {
+.detailBlock i,
+span {
   font-size: 40px;
   margin-bottom: 10px;
+}
+
+.detailBlock tr td {
+  border-bottom: 1px solid #091222;
 }
 
 @media (max-width: 860px) {
