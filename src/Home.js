@@ -51,11 +51,11 @@ const Home = () => {
           <div className='content'>
             {isOpened && (
               <div className='sidebar'>
-                <a href='#'>
+                <a href='/Home'>
                   <i className='material-icons'>favorite</i>
                   <span>home</span>
                 </a>
-                <a href='#'>
+                <a href='/Actions'>
                   <i className='material-icons'>paid</i>
                   <span>Ações</span>
                 </a>

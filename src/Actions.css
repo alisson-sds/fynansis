@@ -1,0 +1,21 @@
+.MainActions {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.FormActions {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.FormActions input {
+  width: 100%;
+}
+
+.MainActions button {
+  margin-left: 50px;
+}
